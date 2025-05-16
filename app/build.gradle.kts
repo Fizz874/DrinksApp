@@ -62,6 +62,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.coil.compose)
+    implementation(libs.androidx.compose.testing)
+    implementation(libs.accompanist.permissions)
+    implementation(libs.androidx.core.animation)
+    implementation(libs.androidx.splashscreen)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -1,5 +1,7 @@
 [versions]
 agp = "8.9.1"
+composeNumberPicker = "1.0.0"
+composenumberpickerVersion = "1.1.2"
 converterGson = "2.11.0"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
@@ -18,6 +20,11 @@ navigationUiKtx = "2.8.9"
 navigationCompose = "2.8.9"
 ui = "1.7.8"
 coil-compose = "2.4.0"
+composeTesting = "1.0.0-alpha03"
+accompanist = "0.31.1-alpha"
+coreAnimation = "1.0.0"
+androidx-splashscreen = "1.0.1"
+
 
 
 [libraries]
@@ -48,6 +55,11 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
 ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
+androidx-compose-testing = { group = "androidx.xr.compose", name = "compose-testing", version.ref = "composeTesting" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
+androidx-core-animation = { group = "androidx.core", name = "core-animation", version.ref = "coreAnimation" }
+androidx-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-splashscreen" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

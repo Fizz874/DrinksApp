@@ -7,4 +7,10 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+
+    <style name="Theme.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="postSplashScreenTheme"> @style/Theme.ListOfDrinks</item>
+<!--        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo</item>-->
+    </style>
 </resources>

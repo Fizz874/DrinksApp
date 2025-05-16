@@ -38,14 +38,34 @@ data class Drink(
     val strMeasure12: String?,
     val strMeasure13: String?,
     val strMeasure14: String?,
-    val strMeasure15: String?
+    val strMeasure15: String?,
+    val strAlcoholic: String?,
+    val idDrink: String
 )
+
+data class DrinkIndex(
+    val strDrink: String,
+    val strDrinkThumb: String?,
+    val idDrink: String
+)
+
 
 data class DrinksResponse(
     val drinks: MutableList<Drink>?
 )
 
+data class DrinksIndexResponse(
+    val drinks: MutableList<DrinkIndex>?
+)
+
 interface CocktailApiService {
-    @GET("search.php")
-    suspend fun searchDrinks(@Query("f") firstLetter: Char): DrinksResponse
+
+    @GET("filter.php")
+    suspend fun getAlcoholicDrinks(@Query("a") type: String): DrinksIndexResponse
+
+
+    @GET("lookup.php")
+    suspend fun lookupDrinkById(@Query("i") id: Int): DrinksResponse
+
+
 }

@@ -16,16 +16,13 @@ class TimerViewModel : ViewModel() {
     var initialTime by mutableLongStateOf(60000)  // Początkowy czas określony przez użytkownika
     var lastUpdateTime by  mutableLongStateOf(0)  // Początkowy czas określony przez użytkownika
 
-
-
-
     fun setTimer(inputMinutes:String, inputSeconds:String){
         isRunning = false
         isFinished = false
         val minutes = inputMinutes.toIntOrNull() ?: 0
         val seconds = inputSeconds.toIntOrNull() ?: 0
         initialTime =
-            ((minutes * 60 + seconds) * 1000).toLong() // Zapisanie początkowego czasu
+            ((minutes * 60 + seconds) * 1000).toLong()
         timeleft = initialTime
     }
 
@@ -47,7 +44,7 @@ class TimerViewModel : ViewModel() {
                 }
 
                 lastUpdateTime = currentTime
-                delay(100L) // odświeżanie co 100 ms dla płynności
+                delay(100L)
             }
 
             if (timeleft <= 0) {
@@ -60,7 +57,8 @@ class TimerViewModel : ViewModel() {
 
     fun refresh(){
         isRunning = false
-        timeleft = initialTime // Resetuj do wprowadzonego czasu
+        isFinished = false
+        timeleft = initialTime
     }
 
     fun pause(){
